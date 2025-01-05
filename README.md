@@ -1,2 +1,2 @@
-# my-react-app
- My first React project!
+## 🚧 Work in Progress 🚧
+This project is actively being developed. Updates are being made regularly to improve functionality and design.
