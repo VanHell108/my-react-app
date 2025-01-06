@@ -5,11 +5,13 @@ import Card from './Card'
 function App() {
   return(
     <>
-       <Header />
-       <Card />
-       <Card />
-       <Card />
-       <Footer />
+      <Header />
+      {/* <div className="card-container"> */}
+         <Card />
+         <Card />
+         <Card />
+      {/* </div> */}
+      <Footer />
     </>
  )
 }
