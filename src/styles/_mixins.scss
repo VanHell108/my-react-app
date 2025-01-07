@@ -1,0 +1,7 @@
+@use 'variables';
+
+@mixin base-styles {
+   background-color: variables.$primaryBackgroundColor;
+   font-family: variables.$primaryFontFamily;
+   color: variables.$primaryColor;
+}

@@ -1,5 +1,18 @@
-@import 'reset';
-@import 'variables';
-@import 'header';
-@import 'footer';
-@import 'card';
+@use 'reset' as *;
+@use 'variables';
+@use 'mixins';
+@use 'header';
+@use 'footer';
+@use 'card';
+
+body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+ }
+
+ main {
+   flex: 1;
+   padding-top: 50px;
+   padding-bottom: 50px;
+ }

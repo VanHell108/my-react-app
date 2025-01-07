@@ -11,10 +11,10 @@ body {
 
 header {
   background-color: rgb(44, 44, 44);
-  padding: 20px;
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
+  padding: 20px;
+  text-align: center;
 }
 
 nav {
@@ -22,12 +22,12 @@ nav {
 }
 
 footer {
+  background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgb(44, 44, 44);
-  color: whitesmoke;
   text-align: center;
   padding: 10px;
 }

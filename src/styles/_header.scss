@@ -1,9 +1,10 @@
+@use 'variables';
+@use 'mixins';
+
 header {
-   background-color: $primaryBackgroundColor;
+  @include mixins.base-styles;
    padding: 20px;
    text-align: center;
-   font-family: $primaryFontFamily;
-   color: $primaryColor;
  }
  
  nav {

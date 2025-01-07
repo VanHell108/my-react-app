@@ -6,11 +6,18 @@ function App() {
   return(
     <>
       <Header />
+      <main>
       <div className="card-container">
          <Card />
          <Card />
          <Card />
+         <Card />         
+         <Card />         
+         <Card />         
+         <Card />         
+         <Card />         
       </div>
+      </main>
       <Footer />
     </>
  )
