@@ -3,11 +3,37 @@
 
 header {
   @include mixins.base-styles;
-   padding: 20px;
-   text-align: center;
- }
- 
- nav {
-   margin-top: 10px;
- }
- 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+h1 {
+  padding: 20px 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0px 20px;
+  ul {
+    font-size: 1.2em;
+    display: flex;
+    list-style: none;
+    height: 100%;
+    li {
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: background-color 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: grey;
+        color: white;
+      }
+    }
+  }
+}

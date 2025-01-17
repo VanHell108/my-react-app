@@ -13,23 +13,49 @@ header {
   background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+h1 {
+  padding: 20px 20px;
 }
 
 nav {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0px 20px;
+}
+nav ul {
+  font-size: 1.2em;
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+nav ul li {
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+nav ul li:hover {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
 }
 
 footer {
   background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .card {
@@ -65,6 +91,7 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 .card .card-text {
+  margin-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .card .card-hover-text {
@@ -78,4 +105,44 @@ footer {
   gap: 10px;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.chuck-norris-jokes {
+  background-color: rgb(44, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 30px;
+}
+.chuck-norris-jokes p {
+  margin-top: 10px !important;
+  margin-bottom: 20px;
+}
+.chuck-norris-jokes button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(111, 111, 111);
+  color: white;
+}
+.chuck-norris-jokes button:hover {
+  background-color: grey;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }/*# sourceMappingURL=styles.css.map */
