@@ -6,7 +6,8 @@ function ChuckNorrisJokes() {
    function fetchJoke() {
       fetch('https://api.chucknorris.io/jokes/random')
          .then(res => res.json())
-         .then(data => setJoke(data.value));
+         .then(data => setJoke(data.value))
+         .catch(err => console.log(err));
    }
 
    React.useEffect(() => {

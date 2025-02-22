@@ -9,6 +9,10 @@ function Card(props){
    const handleMouseEnter = () => setHovered(true);
    const handleMouseLeave = () => setHovered(false);
 
+   const asWellHover =  <span className="card-hover-text">
+                           {hovered ? ` ${props.asWell}!` : "..."}
+                        </span>
+
    return (
       <div 
       className="card"
@@ -18,10 +22,7 @@ function Card(props){
          <img className="card-image" src={props.profilePic} alt="profile_pic" />
          <h2 className="card-title">{props.name}</h2>
          <p className="card-text">
-            I like {props.like} as well as
-            <span className="card-hover-text">
-               {hovered ? ` ${props.asWell}!` : "..."}
-            </span>
+            I like {props.like} as well as {asWellHover}
          </p>
       </div>
    );
