@@ -5,11 +5,13 @@
 @use 'footer';
 @use 'card';
 @use 'chuckNorris';
+@use 'toDoList';
 
 body {
    display: flex;
    flex-direction: column;
    min-height: 100vh;
+   background-color: variables.$secondaryBackgroundColor;
  }
 
  main {

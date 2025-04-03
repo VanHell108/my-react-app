@@ -5,6 +5,7 @@ import myPic from "./assets/profile_pic.jpg"
 import rocketRaccoonPic from "./assets/rocket_raccoon_profile_pic.jpg"
 import babyGrootPic from "./assets/baby_groot_profile_pic.jpg"
 import ChuckNorrisJokes from './ChuckNorrisJokes';
+import ToDoList from './ToDoList';
 
 function App() {
   return(
@@ -18,6 +19,7 @@ function App() {
          <Card />   
       </div>
       </main>
+      <ToDoList />
       <ChuckNorrisJokes />
       <Footer />
     </>

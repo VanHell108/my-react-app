@@ -13,7 +13,7 @@ function ChuckNorrisJokes() {
    React.useEffect(() => {
       fetchJoke();
    }, []);
-
+   
    return (
       <div className='chuck-norris-jokes'>
          <h2>Chuck Norris Jokes</h2>
