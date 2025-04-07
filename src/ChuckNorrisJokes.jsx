@@ -16,7 +16,7 @@ function ChuckNorrisJokes() {
    
    return (
       <div className='chuck-norris-jokes'>
-         <h2>Chuck Norris Jokes</h2>
+         <h1>Chuck Norris Jokes</h1>
          <p id="joke">{joke || 'Loading...'}</p>
          <button onClick={fetchJoke}>Get New Joke</button>
       </div>

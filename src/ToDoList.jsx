@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashCan, faCircleUp, faCircleDown, faSquarePlus } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan, faCircleUp, faCircleDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function ToDoList() {
-   const [toDoList, setToDoList] = useState(["Something", "Something 1"]);
+   const [toDoList, setToDoList] = useState(["Walk the dog", "Pet the cat"]);
 
    const addTask = () => {
       const input = document.querySelector("input");
@@ -31,29 +31,31 @@ function ToDoList() {
    }
 
    return (
-      <div className="to-do-container">
-         <h1 className="to-do-title">To Do List</h1>
-         <ul className="to-do-tasks">
-            {toDoList.map((task, index) =>
-               <li key={index}>
-                  {task}
-                  <button onClick={() => removeTask(index)}>
-                     <FontAwesomeIcon icon={faTrashCan} />
-                  </button>
-                  <button onClick={() => moveUp(index)}>
-                     <FontAwesomeIcon icon={faCircleUp} />
-                  </button>
-                  <button onClick={() => moveDown(index)}>
-                     <FontAwesomeIcon icon={faCircleDown} />
-                  </button>
+      <div className="task-container">
+         <h1 className="task-title">To-Do List</h1>
+         <ul className="task-list">
+            {toDoList.map((task, index) => (
+               <li key={index} className="task-row">
+                  <span className="task-text">{task}</span>
+                  <div className="task-buttons">
+                     <button className="trash-can" onClick={() => removeTask(index)}>
+                        <FontAwesomeIcon icon={faTrashCan} />
+                     </button>
+                     <button className="arrows" onClick={() => moveUp(index)}>
+                        <FontAwesomeIcon icon={faCircleUp} />
+                     </button>
+                     <button className="arrows" onClick={() => moveDown(index)}>
+                        <FontAwesomeIcon icon={faCircleDown} />
+                     </button>
+                  </div>
                </li>
-            )}
+            ))}
          </ul>
 
-         <div className="to-do-input">
-            <input type="text" placeholder="Enter a task..." />
-            <button onClick={addTask}>
-               <FontAwesomeIcon icon={faSquarePlus} />
+         <div className="task-input-container">
+            <input className="task-input-text" type="text" placeholder="Enter a task..." />
+            <button className="task-add-button" onClick={addTask}>
+               <FontAwesomeIcon icon={faPlus} />
             </button>
          </div>
       </div>
