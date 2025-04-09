@@ -17,10 +17,18 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 65px;
+  position: fixed;
+  min-width: 100%;
+  z-index: 100;
 }
-
-h1 {
-  padding: 20px 20px;
+header h1 a.header-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+header h1 a.header-link:hover {
+  color: whitesmoke;
 }
 
 nav {
@@ -36,11 +44,18 @@ nav ul {
   height: 100%;
 }
 nav ul li {
-  padding: 20px 20px;
   display: flex;
   align-items: center;
   height: 100%;
   transition: background-color 0.3s ease;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  color: inherit;
 }
 nav ul li:hover {
   cursor: pointer;
@@ -114,7 +129,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin: 100px 0;
-  padding: 30px;
+  padding: 30px 150px;
 }
 .chuck-norris-jokes p {
   font-size: 1.2em;
@@ -130,6 +145,7 @@ footer {
   color: black;
   font-weight: bold;
   font-size: 1em;
+  margin-bottom: 20px;
 }
 .chuck-norris-jokes button:hover {
   background-color: rgb(222, 222, 222);
@@ -153,6 +169,10 @@ footer {
   align-items: center;
   margin-bottom: 20px;
   list-style-type: none;
+}
+
+.task-input-container {
+  margin-bottom: 20px;
 }
 
 .task-input-text {
@@ -226,9 +246,36 @@ button.arrows:hover {
   background-color: rgb(222, 222, 222);
 }
 
+div.welcome-container {
+  background-color: rgb(44, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  padding: 30px 150px;
+}
+div.welcome-container p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-color: rgb(222, 222, 222);
+}
+
+h1 {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

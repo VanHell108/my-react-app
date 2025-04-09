@@ -1,0 +1,17 @@
+@use 'mixins';
+@use 'variables';
+
+div.welcome-container {
+   @include mixins.base-styles;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: variables.$componentMargin;
+   padding: 30px 150px;
+   p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+   }
+ }
+ 
