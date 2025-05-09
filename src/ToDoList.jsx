@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan, faCircleUp, faCircleDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-function ToDoList() {
+const ToDoList = () => {
    const [toDoList, setToDoList] = useState(["Walk the dog", "Pet the cat"]);
 
    const addTask = () => {

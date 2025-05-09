@@ -137,18 +137,20 @@ footer {
 }
 .chuck-norris-jokes button {
   margin-top: 10px;
-  padding: 8px 12px;
+  margin-bottom: 20px;
+  padding: 0.75rem 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   background-color: whitesmoke;
-  color: black;
+  color: rgb(44, 44, 44);
   font-weight: bold;
   font-size: 1em;
-  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
 .chuck-norris-jokes button:hover {
-  background-color: rgb(222, 222, 222);
+  background-color: rgb(111, 111, 111);
+  color: whitesmoke;
 }
 
 .task-container {
@@ -159,7 +161,9 @@ footer {
   padding: 30px;
 }
 
-.task-title, .task-list, .task-input-container {
+.task-title,
+.task-list,
+.task-input-container {
   display: flex;
   justify-content: center;
 }
@@ -244,6 +248,76 @@ button.arrows {
 }
 button.arrows:hover {
   background-color: rgb(222, 222, 222);
+}
+
+.contact-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.contact-container {
+  background-color: rgb(44, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;
+}
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: whitesmoke;
+}
+.contact-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-container .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.contact-container .contact-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.contact-container .contact-form .form-group input,
+.contact-container .contact-form .form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid rgb(111, 111, 111);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgb(222, 222, 222);
+  color: rgb(44, 44, 44);
+  transition: border-color 0.3s;
+}
+.contact-container .contact-form .form-group input:focus,
+.contact-container .contact-form .form-group textarea:focus {
+  border-color: whitesmoke;
+  outline: none;
+}
+.contact-container .contact-form button {
+  background-color: whitesmoke;
+  color: rgb(44, 44, 44);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.contact-container .contact-form button:hover {
+  background-color: rgb(111, 111, 111);
+  color: whitesmoke;
 }
 
 div.welcome-container {

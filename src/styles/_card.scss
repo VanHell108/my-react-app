@@ -1,6 +1,6 @@
 @use 'variables';
 
-.card{
+.card {
    border: 1px solid black;
    border-radius: 10px;
    text-align: center;
@@ -17,32 +17,36 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   &:hover{
+
+   &:hover {
       transform: scale(1.1);
       z-index: 10;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
    }
-   .card-image{
+
+   .card-image {
       max-width: 75%;
       height: auto;
       border-radius: 50%;
       margin-bottom: 10px;
-    }
-   .card-title .card-text .card-hover-text{
+   }
+
+   .card-title .card-text .card-hover-text {
       font-family: variables.$primaryFontFamily;
-    }
-   .card-text{
+   }
+
+   .card-text {
       margin-top: 10px;
       min-height: 2.5em;
       position: relative;
-    }
- }
+   }
+}
 
- .card-container {
+.card-container {
    display: flex;
    flex-direction: row;
    justify-content: center;
    flex-wrap: wrap;
    gap: 50px;
    margin: variables.$componentMargin;
- }
+}

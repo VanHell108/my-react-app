@@ -3,7 +3,7 @@ import myPic from "./assets/profile_pic.jpg"
 import rocketRaccoonPic from "./assets/rocket_raccoon_profile_pic.jpg"
 import babyGrootPic from "./assets/baby_groot_profile_pic.jpg"
 
-function Cards() {
+const Cards = () =>  {
 
    return(
       <div className="card-container">

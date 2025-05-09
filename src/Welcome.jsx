@@ -1,4 +1,4 @@
-function Welcome(){
+const Welcome = () => {
 
    return(
       <div className="welcome-container">

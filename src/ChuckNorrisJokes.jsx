@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ChuckNorrisJokes() {
+const ChuckNorrisJokes = () =>  {
    const [joke, setJoke] = useState('');
 
    function fetchJoke() {

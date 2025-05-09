@@ -1,0 +1,78 @@
+@use 'variables';
+@use 'mixins';
+
+.contact-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: variables.$componentMargin;
+  min-height: calc(100vh - 200px);
+}
+
+
+.contact-container {
+   @include mixins.base-styles;
+   max-width: 600px;
+   padding: 2rem;
+   border-radius: 16px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   width: 100%;
+   margin: 0 auto;
+
+   h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+      color: variables.$primaryColor;
+   }
+
+   .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .form-group {
+         display: flex;
+         flex-direction: column;
+
+         label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: variables.$primaryColor;
+         }
+
+         input,
+         textarea {
+            padding: 0.75rem;
+            border: 1px solid variables.$secondaryColor;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: variables.$secondaryBackgroundColor;
+            color: variables.$primaryBackgroundColor;
+            transition: border-color 0.3s;
+
+            &:focus {
+               border-color: variables.$primaryColor;
+               outline: none;
+            }
+         }
+      }
+
+      button {
+         background-color: variables.$primaryColor;
+         color: variables.$primaryBackgroundColor;
+         padding: 0.75rem;
+         border: none;
+         border-radius: 8px;
+         font-size: 1rem;
+         cursor: pointer;
+         font-weight: bold;
+         transition: background-color 0.3s;
+
+         &:hover {
+            background-color: variables.$secondaryColor;
+            color: variables.$primaryColor;
+         }
+      }
+   }
+}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types"
 import blankPic from "./assets/blank_profile_pic.png"
 
-function Card(props){
+const Card = (props) => {
 
    const [hovered, setHovered] = useState(false);
 

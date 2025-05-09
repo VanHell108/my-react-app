@@ -2,32 +2,35 @@
 @use 'variables';
 
 .chuck-norris-jokes {
-   @include mixins.base-styles;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin: variables.$componentMargin;
-   padding: 30px 150px;
-   p {
-      font-size: 1.2em;
-      margin-bottom: 25px;
-   }
-   button {
-     margin-top: 10px;
-     padding: 8px 12px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-     background-color: variables.$primaryColor;
-     color: black;
-     font-weight: bold;
-     font-size: 1em;
-     margin-bottom: 20px;
- 
-     &:hover {
-       background-color: variables.$secondaryBackgroundColor;
-     }
-   }
- }
- 
+  @include mixins.base-styles;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: variables.$componentMargin;
+  padding: 30px 150px;
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: variables.$primaryColor;
+    color: variables.$primaryBackgroundColor;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: variables.$secondaryColor;
+      color: variables.$primaryColor;
+    }
+  }
+}

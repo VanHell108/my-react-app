@@ -5,10 +5,10 @@ import Cards from './Cards';
 import ChuckNorrisJokes from './ChuckNorrisJokes';
 import ToDoList from './ToDoList';
 import ScrollToTop from './ScrollToTop';
-import Shop from './Shop';
+import Contact from './Contact';
 import Welcome from './Welcome';
 
-function App() {
+const App = () =>  {
   return (
     <>
       <ScrollToTop />
@@ -29,7 +29,7 @@ function App() {
             </div>
           </>
         } />
-        <Route path="/my-react-app/shop" element={<Shop />} />
+        <Route path="/my-react-app/contact" element={<Contact />} />
       </Routes>
 
       <Footer />

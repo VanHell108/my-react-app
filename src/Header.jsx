@@ -1,9 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 
-function Header() {
+const Header = () => {
    const location = useLocation();
-   // Check if the current path is the shop page
-   const isShopPage = location.pathname === '/my-react-app/shop';
+   const isContactPage = location.pathname === '/my-react-app/contact';
 
    const handleHomeClick = () => {
       window.scrollTo(0, 0);
@@ -26,14 +25,14 @@ function Header() {
                         Home
                </Link>
             </li>
-            {!isShopPage && (
+            {!isContactPage && (
                <>
                   <li><a href="#cards">Cards</a></li>
                   <li><a href="#todo">To-Do</a></li>
                   <li><a href="#jokes">Jokes</a></li>
                </>
             )}
-            <li><Link to="/my-react-app/shop">Shop</Link></li>
+            <li><Link to="/my-react-app/contact">Contact</Link></li>
          </ul>
       </nav>
     </header>
