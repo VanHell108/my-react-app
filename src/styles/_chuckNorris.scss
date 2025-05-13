@@ -2,6 +2,10 @@
 @use 'variables';
 
 .chuck-norris-jokes {
+  h1{
+    text-align: center
+  }
+  
   @include mixins.base-styles;
   display: flex;
   flex-direction: column;

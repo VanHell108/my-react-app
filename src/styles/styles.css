@@ -83,6 +83,10 @@ nav ul li:hover {
   }
 }
 @media (max-width: 768px) {
+  header h1 {
+    padding: 20px;
+    font-size: 1.8rem;
+  }
   .hamburger {
     display: block;
   }
@@ -199,6 +203,9 @@ footer {
   justify-content: center;
   margin: 100px 0;
   padding: 30px 150px;
+}
+.chuck-norris-jokes h1 {
+  text-align: center;
 }
 .chuck-norris-jokes p {
   font-size: 1.2em;
