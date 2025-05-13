@@ -15,3 +15,14 @@ div.welcome-container {
       margin-bottom: 20px;
    }
 }
+
+@media (max-width: 768px) {
+  div.welcome-container {
+    padding: 20px;
+    text-align: center;
+
+    p {
+      font-size: 1em;
+    }
+  }
+}

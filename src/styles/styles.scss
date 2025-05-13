@@ -26,3 +26,8 @@ body {
   text-decoration: none;
   color: white;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}

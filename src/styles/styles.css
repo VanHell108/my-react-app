@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,7 +35,6 @@ nav {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0px 20px;
 }
 nav ul {
   font-size: 1.3em;
@@ -63,6 +62,74 @@ nav ul li:hover {
   color: white;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: whitesmoke;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 64px;
+    background-color: rgb(44, 44, 44);
+  }
+  nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  nav.open ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+  }
+  nav.open ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    animation: fadeSlideIn 0.3s ease forwards;
+  }
+  nav.open ul li a {
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+  }
+  nav.open ul li a:hover {
+    background-color: grey;
+  }
+  nav.open ul li a:active {
+    background-color: darkgrey;
+  }
+}
 footer {
   background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
@@ -71,6 +138,8 @@ footer {
   width: 100%;
   text-align: center;
   padding: 30px;
+  margin: 100px 0px 0px;
+  bottom: 0px;
 }
 
 .card {
@@ -144,15 +213,36 @@ footer {
   cursor: pointer;
   background-color: whitesmoke;
   color: rgb(44, 44, 44);
-  font-weight: bold;
   font-size: 1em;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  font-weight: bold;
 }
-.chuck-norris-jokes button:hover {
+.chuck-norris-jokes button:hover, .chuck-norris-jokes button:focus {
   background-color: rgb(111, 111, 111);
   color: whitesmoke;
+  font-weight: bold;
+}
+.chuck-norris-jokes button:active {
+  background-color: #898989;
+  color: whitesmoke;
+  transition-duration: 0.05s;
+  font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .chuck-norris-jokes {
+    padding: 20px;
+  }
+  .chuck-norris-jokes p {
+    font-size: 1em;
+    text-align: center;
+  }
+  .chuck-norris-jokes button {
+    width: 100%;
+  }
+}
 .task-container {
   background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
@@ -250,6 +340,30 @@ button.arrows:hover {
   background-color: rgb(222, 222, 222);
 }
 
+@media (max-width: 768px) {
+  .task-container {
+    padding: 20px;
+  }
+  .task-input-text {
+    width: 100%;
+  }
+  .task-text {
+    width: 100%;
+    font-size: 1em;
+    max-width: 100%;
+  }
+  .task-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .task-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
 .contact-container-wrapper {
   display: flex;
   justify-content: center;
@@ -307,19 +421,28 @@ button.arrows:hover {
 .contact-container .contact-form button {
   background-color: whitesmoke;
   color: rgb(44, 44, 44);
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   font-weight: bold;
-  transition: background-color 0.3s;
 }
 .contact-container .contact-form button:hover {
   background-color: rgb(111, 111, 111);
   color: whitesmoke;
+  font-weight: bold;
+}
+.contact-container .contact-form button:active {
+  background-color: #898989;
+  color: whitesmoke;
+  transition-duration: 0.05s;
+  font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .contact-container {
+    border-radius: 0;
+  }
+}
 div.welcome-container {
   background-color: rgb(44, 44, 44);
   font-family: Arial, Helvetica, sans-serif;
@@ -336,6 +459,15 @@ div.welcome-container p {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  div.welcome-container {
+    padding: 20px;
+    text-align: center;
+  }
+  div.welcome-container p {
+    font-size: 1em;
+  }
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -352,4 +484,9 @@ h1 {
   padding: 20px 20px;
   text-decoration: none;
   color: white;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }/*# sourceMappingURL=styles.css.map */

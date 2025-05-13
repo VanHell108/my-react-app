@@ -24,13 +24,40 @@
     cursor: pointer;
     background-color: variables.$primaryColor;
     color: variables.$primaryBackgroundColor;
-    font-weight: bold;
     font-size: 1em;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    font-weight: bold;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: variables.$secondaryColor;
       color: variables.$primaryColor;
+      font-weight: bold;
+    }
+
+    &:active {
+      background-color: lighten(variables.$secondaryColor, 10%);
+      color: variables.$primaryColor;
+      transition-duration: 0.05s;
+      font-weight: bold;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .chuck-norris-jokes {
+    padding: 20px;
+
+    p {
+      font-size: 1em;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
     }
   }
 }

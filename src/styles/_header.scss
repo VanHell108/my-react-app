@@ -29,7 +29,6 @@ nav {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0px 20px;
 
   ul {
     font-size: 1.3em;
@@ -56,6 +55,84 @@ nav {
         cursor: pointer;
         background-color: grey;
         color: white;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: variables.$primaryColor;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 64px;
+    background-color: variables.$primaryBackgroundColor;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        width: 100%;
+        background-color: variables.$primaryBackgroundColor;
+
+        li {
+          display: block;
+          width: 100%;
+          text-align: center;
+          animation: fadeSlideIn 0.3s ease forwards;
+
+          a {
+            display: block;
+            width: 100%;
+            padding: 15px 0px;
+            background-color: variables.$primaryBackgroundColor;
+            color: white;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+              background-color: grey;
+            }
+
+            &:active {
+              background-color: darkgrey;
+            }
+          }
+        }
       }
     }
   }

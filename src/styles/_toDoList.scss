@@ -99,3 +99,32 @@ button.arrows {
       background-color: variables.$secondaryBackgroundColor;
    }
 }
+
+@media (max-width: 768px) {
+  .task-container {
+    padding: 20px;
+  }
+
+  .task-input-text {
+    width: 100%;
+  }
+
+  .task-text {
+    width: 100%;
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  .task-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

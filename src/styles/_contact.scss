@@ -2,11 +2,11 @@
 @use 'mixins';
 
 .contact-container-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: variables.$componentMargin;
-  min-height: calc(100vh - 200px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: variables.$componentMargin;
+   min-height: calc(100vh - 200px);
 }
 
 
@@ -61,18 +61,30 @@
       button {
          background-color: variables.$primaryColor;
          color: variables.$primaryBackgroundColor;
-         padding: 0.75rem;
-         border: none;
-         border-radius: 8px;
-         font-size: 1rem;
-         cursor: pointer;
+         transition: background-color 0.2s, color 0.2s;
+         -webkit-tap-highlight-color: transparent;
+         touch-action: manipulation;
          font-weight: bold;
-         transition: background-color 0.3s;
 
          &:hover {
             background-color: variables.$secondaryColor;
             color: variables.$primaryColor;
+            font-weight: bold;
+         }
+
+         &:active {
+            background-color: lighten(variables.$secondaryColor, 10%);
+            color: variables.$primaryColor;
+            transition-duration: 0.05s;
+            font-weight: bold;
          }
       }
+
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-container {
+      border-radius: 0;
    }
 }
